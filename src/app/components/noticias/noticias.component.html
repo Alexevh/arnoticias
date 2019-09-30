@@ -1,0 +1,12 @@
+<ion-grid fixed>
+    <ion-row>
+      <!-- En mobiles quiero que la columna use las 12, en pantallas grandes solo 3, es igial que bootstrap-->
+      <ion-col size="12" lg="3" *ngFor="let noticia of noticias; let i = index">
+
+     <app-noticia [enFavoritos]="enFavoritos" 
+     [noticia]="noticia" 
+     [indice]="i"></app-noticia>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>

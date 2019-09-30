@@ -1,0 +1,24 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <!-- En el componente noticias.ts dice que recibo un Input que se llama noticias, aca estoy enviandole al componente
+  el vector de noticias que el backend de esta pagina ya obtuvo para que entonces inyecte las noticias-->
+<app-noticias [noticias]="noticias"></app-noticias>
+
+
+<ion-infinite-scroll treshold="150px" (ionInfinite)="cargarMasDatos($event)" >
+    <ion-infinite-scroll-content 
+    loadingSpinner="crescent"
+    loadingText="Cargando noticias...">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
